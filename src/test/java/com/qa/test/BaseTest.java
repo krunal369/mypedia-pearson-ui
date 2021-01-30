@@ -16,6 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
 
 import com.qa.Pages.BasePage;
 public class BaseTest {
@@ -89,7 +90,7 @@ public class BaseTest {
 		basePage= new BasePage(driver, wait);
 	}
 	
-	//@AfterMethod
+	@AfterMethod
 	public void tearDown() {
 		//close browser.
 		driver.quit();
